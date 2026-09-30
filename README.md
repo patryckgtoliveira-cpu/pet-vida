@@ -80,7 +80,7 @@ npm run preview
 3. O workflow `.github/workflows/deploy.yml` instala dependências, executa o build e publica `dist/`.
 4. A URL aparecerá em **Settings → Pages** após a conclusão do primeiro workflow.
 
-O build usa o caminho `/petvida-clinica/` no GitHub Actions. Se o nome do repositório mudar, atualize `base` em `vite.config.js` e este README.
+O build usa o caminho `/pet-vida/` no GitHub Actions. Se o nome do repositório mudar, atualize `base` em `vite.config.js` e este README.
 
 ## Segurança e licença
 
