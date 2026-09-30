@@ -1,0 +1,155 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-09-30T00:00:00.000Z",
+  "title": "Design System: PetVida Clínica",
+  "extensions": {
+    "colorMeta": {
+      "forest-deep": {
+        "role": "primary",
+        "displayName": "Deep Forest",
+        "canonical": "#12382f",
+        "tonalRamp": ["#081c17", "#0c2921", "#10362b", "#154336", "#205545", "#477664", "#88aa96", "#e7f0e8"]
+      },
+      "forest": {
+        "role": "primary",
+        "displayName": "Clinic Green",
+        "canonical": "#17483b",
+        "tonalRamp": ["#0b241d", "#103329", "#17483b", "#28634f", "#4c8068", "#7ea48d", "#b9d0bd", "#e9f2e7"]
+      },
+      "lime-signal": {
+        "role": "tertiary",
+        "displayName": "Signal Lime",
+        "canonical": "#d9ef81",
+        "tonalRamp": ["#29350d", "#46591c", "#6d862c", "#99b747", "#b9d566", "#d9ef81", "#e7f5af", "#f4fadd"]
+      },
+      "care-coral": {
+        "role": "secondary",
+        "displayName": "Care Coral",
+        "canonical": "#c34f43",
+        "tonalRamp": ["#32110e", "#591d17", "#812e25", "#a83e33", "#c34f43", "#d67c70", "#e8aaa0", "#f8e6e2"]
+      },
+      "care-blue": {
+        "role": "secondary",
+        "displayName": "Care Blue",
+        "canonical": "#3d6d88",
+        "tonalRamp": ["#10202b", "#1d3544", "#2b4d61", "#3d6d88", "#648da4", "#8eafbf", "#bfd2dc", "#e8f1f6"]
+      },
+      "neutral-canvas": {
+        "role": "neutral",
+        "displayName": "Operational Canvas",
+        "canonical": "#f5f7f2",
+        "tonalRamp": ["#222622", "#424740", "#62675f", "#858a81", "#aeb3aa", "#d0d5cc", "#e4e8e0", "#f5f7f2"]
+      },
+      "neutral-paper": {
+        "role": "neutral",
+        "displayName": "Clean Surface",
+        "canonical": "#ffffff",
+        "tonalRamp": ["#292c29", "#4a4e49", "#6c706a", "#90948e", "#b4b8b1", "#d1d5ce", "#e9ece7", "#ffffff"]
+      },
+      "neutral-ink": {
+        "role": "neutral",
+        "displayName": "Graphite Ink",
+        "canonical": "#202b27",
+        "tonalRamp": ["#111715", "#202b27", "#35413b", "#4c5951", "#697771", "#8a968e", "#bac3ba", "#edf1eb"]
+      },
+      "neutral-line": {
+        "role": "neutral",
+        "displayName": "Quiet Rule",
+        "canonical": "#e1e8e1",
+        "tonalRamp": ["#292f2a", "#465047", "#636e64", "#839087", "#a2aea4", "#bdc8bd", "#d1dacf", "#e1e8e1"]
+      }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Condensed Display", "purpose": "Page headings and pet names." },
+      "title": { "displayName": "Section Title", "purpose": "Schedule and directory headings." },
+      "body": { "displayName": "Operational Body", "purpose": "Forms, names, and supporting copy." },
+      "label": { "displayName": "Compact Label", "purpose": "Metadata, filters, and state labels." }
+    },
+    "shadows": [],
+    "motion": [
+      { "name": "state-transition", "value": "150ms ease", "purpose": "Button and selection state changes." },
+      { "name": "reduced-motion", "value": "prefers-reduced-motion", "purpose": "Minimize transitions when requested by the operating system." }
+    ],
+    "breakpoints": [
+      { "name": "compact-desktop", "value": "1240px" },
+      { "name": "stack-inspector", "value": "980px" },
+      { "name": "mobile-navigation", "value": "720px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action for adding an appointment.",
+      "html": "<button class=\"ds-button-primary\">Add appointment</button>",
+      "css": ".ds-button-primary { min-height: 39px; padding: 0 14px; border: 1px solid transparent; border-radius: 6px; color: #fff; background: var(--forest); font: 700 11px 'DM Sans', sans-serif; cursor: pointer; transition: background 150ms ease, transform 150ms ease; } .ds-button-primary:hover { background: #23634e; } .ds-button-primary:focus-visible { outline: 3px solid #d9ef81; outline-offset: 2px; } .ds-button-primary:active { transform: translateY(1px); }"
+    },
+    {
+      "name": "Quiet Button",
+      "kind": "button",
+      "refersTo": "button-quiet",
+      "description": "Secondary action that does not compete with booking.",
+      "html": "<button class=\"ds-button-quiet\">Cancel</button>",
+      "css": ".ds-button-quiet { min-height: 35px; padding: 0 10px; border: 1px solid #dce5dd; border-radius: 6px; color: #526159; background: #fff; font: 700 9px 'DM Sans', sans-serif; cursor: pointer; } .ds-button-quiet:hover { border-color: #a8b8ac; background: #f8faf7; } .ds-button-quiet:focus-visible { outline: 3px solid #d9ef81; outline-offset: 2px; }"
+    },
+    {
+      "name": "Search Field",
+      "kind": "input",
+      "refersTo": "input-search",
+      "description": "Compact filtering input for the schedule.",
+      "html": "<label class=\"ds-search\"><svg aria-hidden=\"true\" viewBox=\"0 0 24 24\"><circle cx=\"11\" cy=\"11\" r=\"7\"/><path d=\"m16 16 4 4\"/></svg><input aria-label=\"Search appointments\" placeholder=\"Search appointments\" /></label>",
+      "css": ".ds-search { display: flex; height: 34px; align-items: center; gap: 8px; padding: 0 9px; border: 1px solid #e1e7e1; border-radius: 5px; color: #7b8981; background: #fff; } .ds-search svg { width: 17px; height: 17px; fill: none; stroke: currentColor; stroke-width: 2; } .ds-search input { min-width: 0; border: 0; outline: 0; color: #202b27; background: transparent; font: 10px 'DM Sans', sans-serif; } .ds-search:focus-within { border-color: #779a7b; box-shadow: 0 0 0 2px #e5efe3; } .ds-search input:focus-visible { outline: none; }"
+    },
+    {
+      "name": "Selected Navigation Item",
+      "kind": "nav",
+      "refersTo": "nav-active",
+      "description": "Active workspace section in the forest navigation rail.",
+      "html": "<button class=\"ds-nav-active\">Agenda</button>",
+      "css": ".ds-nav-active { min-height: 43px; padding: 0 11px; border: 0; border-radius: 6px; color: #12382f; background: #d9ef81; font: 700 12px 'DM Sans', sans-serif; text-align: left; cursor: pointer; } .ds-nav-active:hover { background: #e5f6a4; } .ds-nav-active:focus-visible { outline: 3px solid #d9ef81; outline-offset: 2px; }"
+    },
+    {
+      "name": "Appointment State Chip",
+      "kind": "chip",
+      "refersTo": "status-confirmed",
+      "description": "Readable state paired with a subdued role tint.",
+      "html": "<span class=\"ds-status\">Confirmed</span>",
+      "css": ".ds-status { display: inline-flex; min-height: 21px; align-items: center; padding: 0 6px; border-radius: 4px; color: #356548; background: #e7f2e6; font: 700 8px 'DM Sans', sans-serif; }"
+    },
+    {
+      "name": "Schedule Ticket",
+      "kind": "custom",
+      "refersTo": "schedule-ticket",
+      "description": "One selectable row holds time, pet, service, staff, and state together.",
+      "html": "<button class=\"ds-ticket\"><time>09:30</time><strong>Bento</strong><span>Banho e tosa</span><small>Confirmado</small></button>",
+      "css": ".ds-ticket { display: grid; width: 100%; min-height: 59px; grid-template-columns: 62px minmax(100px, 1.4fr) minmax(90px, 1fr) auto; align-items: center; gap: 9px; padding: 7px 15px; border: 0; border-bottom: 1px solid #edf0ec; color: #293a31; background: #fff; text-align: left; font: 10px 'DM Sans', sans-serif; cursor: pointer; } .ds-ticket:hover { background: #f8faf7; } .ds-ticket:focus-visible { outline: 3px solid #d9ef81; outline-offset: -3px; } .ds-ticket time { color: #335144; font: 600 16px 'Barlow Condensed', sans-serif; } .ds-ticket small { padding: 4px 6px; border-radius: 4px; color: #356548; background: #e7f2e6; font-weight: 700; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "A Clinic's Ticket Rail",
+    "overview": "The interface treats the appointment as a working ticket rather than a detached calendar cell. Time, service, pet, responsible person, staff assignment, and current state travel together so reception can scan a busy day without losing the care context.\n\nThe system pairs a practical work surface with a neighborhood-clinic palette: deep forest anchors navigation, white and a cool green-tinted canvas hold dense information, and coral, blue, lime, and yellow distinguish operational states. The visual language comes from clear labels, short rows, and a restrained type contrast, not faux paper or decorative medical imagery.",
+    "keyCharacteristics": [
+      "Appointment-first information hierarchy.",
+      "Distinct color roles paired with readable state labels.",
+      "Dense schedule rows balanced by an unhurried page rhythm.",
+      "Clear synthetic-data notices wherever demonstration content appears."
+    ],
+    "rules": [
+      { "name": "The Labeled State Rule", "body": "Color reinforces a state; readable text always names it.", "section": "colors" },
+      { "name": "The Two-Face Rule", "body": "Use Barlow Condensed for hierarchy and DM Sans for all operational detail; do not introduce a third display voice.", "section": "typography" },
+      { "name": "The Border-First Rule", "body": "Separate operational surfaces with a fine border or a tonal shift, not a stack of shadows.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep status text visible beside its color treatment.",
+      "Do place service, pet, time, and assigned professional in the same appointment row.",
+      "Do label synthetic records and unconnected capabilities wherever they appear.",
+      "Do retain the full keyboard focus outline and reduced-motion preference."
+    ],
+    "donts": [
+      "Don't make color the only way to recognize a booking state.",
+      "Don't present demonstration notes as a real medical history or reminder.",
+      "Don't replace the operational ticket list with decorative metric cards or faux-paper textures."
+    ]
+  }
+}
