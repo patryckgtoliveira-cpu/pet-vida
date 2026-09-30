@@ -73,6 +73,16 @@ npm run build
 npm run preview
 ```
 
+Para gerar uma versão PDF estática das capturas desktop e móvel:
+
+```bash
+npm run export:pdf
+```
+
+O comando cria `petvida-aplicativo.pdf` na raiz. O PDF serve para apresentação; os controles interativos estão na versão web.
+
+**PDF do protótipo:** [Baixar petvida-aplicativo.pdf](petvida-aplicativo.pdf).
+
 ## Publicar no GitHub Pages
 
 1. Crie um repositório GitHub chamado `petvida-clinica` e envie o conteúdo deste projeto para a branch `main`.
